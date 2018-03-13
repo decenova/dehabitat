@@ -1,0 +1,19 @@
+<%= form_for(:users,url: users_login_path, html: {id: 'login_form'}, method: 'post') do |form| %>   <!-- form đăng nhập -->
+  <h1>Đăng nhập </h1>                                 
+  <p>
+      <%= form.label ('Tên đăng nhập:'), class: 'uname' %> <br/>
+      <%= form.text_field :username %> <br/>
+      <p id="errorUsername" class='error' ></p>
+  </p>   
+  <p>
+      <%= form.label ('Mật khẩu:'), class: 'youpasswd' %> <br/>
+      <%= form.password_field :password %> <br/>
+      <p id="errorPassword" class='error'></p>
+  </p>
+  <p id="invalid" class='error'>
+      
+  </p>
+  <p class="login button"> 
+      <%= form.submit ('Đăng nhập') %>
+  </p>
+<% end %>
