@@ -1,0 +1,2 @@
+class DayLife < ApplicationRecord
+end

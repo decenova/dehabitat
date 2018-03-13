@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Goal:</strong>
+  <%= @day_life.goal %>
+</p>
+
+<p>
+  <strong>Diary:</strong>
+  <%= @day_life.diary %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @day_life.day %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @day_life.status %>
+</p>
+
+<%= link_to 'Edit', edit_day_life_path(@day_life) %> |
+<%= link_to 'Back', day_lives_path %>

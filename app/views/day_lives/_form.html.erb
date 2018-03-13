@@ -1,0 +1,37 @@
+<%= form_with(model: day_life, local: true) do |form| %>
+  <% if day_life.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(day_life.errors.count, "error") %> prohibited this day_life from being saved:</h2>
+
+      <ul>
+      <% day_life.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :goal %>
+    <%= form.text_area :goal, id: :day_life_goal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diary %>
+    <%= form.text_area :diary, id: :day_life_diary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.date_select :day, id: :day_life_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :day_life_status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
